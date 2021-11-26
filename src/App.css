@@ -1,38 +1,115 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@100;200;300;500&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #040221;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 400;
   text-align: center;
+  color: white;
+  margin: 2em 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-image {
+  user-select: none;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.carousel-image-prev-btn,
+.carousel-image-next-btn {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  cursor: pointer;
+  width: 5em;
+  height: 2.5em;
+  transition: transform 100ms ease-in;
+}
+
+.carousel-image-prev-btn:hover,
+.carousel-image-next-btn:hover {
+  transform: scale(1.5);
+} 
+
+
+.carousel-image-prev-btn {
+  left: 14%;
+}
+
+.carousel-image-next-btn {
+  right: 15%;
+}
+
+.image-slider {
+  width: 100%;
+  height: 600px;
+  border-radius: 50px;
+  box-shadow: 0 0 8px 5px rgba(234, 231, 232, 0.48);
+}
+
+.slide { 
+  opacity: 0.5;
+  transition-duration: 1s ease;
+} 
+
+.slide.active {
+  max-width: 1000px;
+  width: 45%;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+/* responsive layout */
+
+@media screen and (max-width: 1000px) {
+  .image-slider {
+    transform: scale(0.8);
   }
-  to {
-    transform: rotate(360deg);
+
+  .slide.active {
+    width: 70%;
+  }
+
+  .carousel-image-prev-btn {
+    left: 7%;
+  }
+
+  .carousel-image-next-btn {
+    right: 7%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-slider {
+    transform: scale(0.6);
+  }
+
+  .carousel-image-prev-btn {
+    left: 0%;
+  }
+
+  .carousel-image-next-btn {
+    right: 0%;
+  }
+
+  .slide.active {
+    width: 100%;
   }
 }
