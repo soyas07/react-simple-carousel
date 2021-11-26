@@ -25,7 +25,7 @@ h1 {
 }
 
 .carousel-image {
-  user-select: none;
+  user-select: none ;
   display: flex;
   position: relative;
   justify-content: center;
