@@ -9,5 +9,39 @@
 .carousel-slider {
     width: 90%;
     height: 50vh;
-    border: 1px solid red;
+    border-radius: 20px;
+    
 }
+
+/* slider arrow */
+
+.rec.rec-arrow {
+    background-color: #E574BC;
+}
+
+.rec.rec-arrow.rec-arrow-right:hover,
+.rec.rec-arrow.rec-arrow-right:focus,
+.rec.rec-arrow.rec-arrow-left:hover,
+.rec.rec-arrow.rec-arrow-left:focus {
+    background: #C52184;
+}
+
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+
+/* slide dot */
+
+.rec.rec-dot {
+    background: white;
+}
+
+.rec.rec-dot_active {
+    background: red;
+    box-shadow: 0 0 1px 3px #C52184;
+}
+
+.rec.rec-dot_active:focus {
+    box-shadow: 0 0 1px 3px #C52184;
+}
+
