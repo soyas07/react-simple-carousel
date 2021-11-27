@@ -2,6 +2,7 @@ import './App.css';
 import ImageData from './component/ImageData'
 import { useState } from 'react'
 import { FcNext, FcPrevious } from 'react-icons/fc'
+import ImageSlider from './component/ImageSlider';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <FcPrevious className="carousel-image-prev-btn" onClick={prevSlide}/>
         {data}
       </div>
+      <ImageSlider data={ImageData} />
     </div>
 
   );
